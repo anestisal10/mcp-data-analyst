@@ -1,0 +1,20 @@
+services:
+  data-analyst:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: mcp-data-analyst:latest
+    container_name: mcp-data-analyst
+    volumes:
+      # Mount your own data files here
+      - ./data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
+      - DATA_SOURCE=data/sample.db
+    # MCP uses stdio — run interactively
+    stdin_open: true
+    tty: true
+    deploy:
+      resources:
+        limits:
+          memory: 512m

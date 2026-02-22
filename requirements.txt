@@ -1,0 +1,9 @@
+mcp
+pandas
+matplotlib
+openpyxl
+python-dotenv
+tabulate
+python-json-logger
+sqlparse
+pytest

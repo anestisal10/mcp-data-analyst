@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcp-data-analyst"
+version = "0.1.0"
+description = "A Model Context Protocol (MCP) server for data analysis — SQL queries and visualizations"
+readme = "README.md"
+authors = [
+    { name = "Anestis Alexiadis" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "mcp",
+    "pandas",
+    "matplotlib",
+    "openpyxl",
+    "python-dotenv",
+    "tabulate",
+    "python-json-logger",
+    "sqlparse",
+]
+
+[project.scripts]
+mcp-data-analyst = "src.server:main"
